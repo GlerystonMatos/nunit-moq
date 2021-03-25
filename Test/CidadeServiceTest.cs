@@ -19,7 +19,7 @@ namespace Test
         }
 
         [Test]
-        public void CreateTest()
+        public void CriarUmaNovaCidade()
         {
             Cidade cidade = new Cidade("Fortaleza");
             _mockCidadeRepository.Setup(r => r.Create(cidade)).Returns(true);
@@ -27,7 +27,7 @@ namespace Test
         }
 
         [Test]
-        public void UpdateTest()
+        public void AtualizarUmaCidade()
         {
             Cidade cidade = new Cidade("Fortaleza");
             _mockCidadeRepository.Setup(r => r.Update(cidade)).Returns(true);
@@ -35,7 +35,7 @@ namespace Test
         }
 
         [Test]
-        public void RemoveTest()
+        public void ExcluirUmaCidade()
         {
             Cidade cidade = new Cidade("Fortaleza");
             _mockCidadeRepository.Setup(r => r.Remove(cidade)).Returns(true);
@@ -43,7 +43,7 @@ namespace Test
         }
 
         [Test]
-        public void GetAllTest()
+        public void ObterTodasAsCidades()
         {
             IList<Cidade> cidades = new List<Cidade>();
             cidades.Add(new Cidade("Fortaleza"));
@@ -54,7 +54,7 @@ namespace Test
         }
 
         [Test]
-        public void FindByIdTest()
+        public void ObterCidadePeloId()
         {
             Cidade cidade = new Cidade("Fortaleza");
             _mockCidadeRepository.Setup(r => r.FindById(cidade.Id)).Returns(cidade);
