@@ -7,8 +7,8 @@ namespace Test
     public class UtilitariosTest
     {
         [Test]
-        [TestCase(10, 20, 30)]
-        [TestCase(5, 5, 10)]
+        [TestCase(10, 20, 30, TestName = "A soma dos números 10 e 20 deve retornar 30")]
+        [TestCase(5, 5, 10, TestName = "A soma dos números 05 e 05 deve retornar 10")]
         public void AoSomarDeveRetornarASomaDosNumeros(int valor01, int valor02, int resultado)
         {
             Assert.AreEqual(resultado, Utilitarios.Somar(valor01, valor02));
